@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UV-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+    />
+
+  </head>
+
+  <body>
+    <!-- no internet contect -->
+    <div id="noInternet" class="noInternet position-fixed top-0 bottom-0 h-100 w-100 z-3 bg-white">
+      <div class="container w-100 d-flex justify-content-center align-items-center">
+        <div class="content">
+          <h2 class="title">No internet</h2>
+          <p>Try:</p>
+          <ul class="ms-4 ps-4 text-secondary">
+            <li>Checking the network cables, modem, and router</li>
+            <li>Reconnecting to Wi-Fi</li>
+            <li><a href="#" class="text-decoration-none">Running Windows Network Diagnostics</a></li>
+          </ul>
+          <p class="text-secondary">ERR_INTERNET_DISCONNECTED</p>
+          <button id="reload" class="btn btn-dark" onclick="location.reload()">
+            Reload
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- no internet contect -->
+
+    <!-- navbar --> 
+    <header >
+      <nav class="navbar navbar-expand-lg bg-primary text-white fixed-top w-100 m-0 z-3 px-3 py-0">
+        <div class="container position-relative bg-primary p-0 my-0 h-75">
+          <a class="navbar-brand p-0" href="index.html">
+            <img
+              src="images/14603825_5484736.jpg"
+              alt="Logo"
+              width="100px"
+              height="70px"
+            />
+          </a>
+           <h3 id="user" class="text-white text-center position-absolute start-50 translate-middle-x pt-md-0 pt-2 text-capitalize ps-md-0 ps-3"></h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse pt-md-0 pt-3" id="navbarSupportedContent">
+            <ul id="links" class="navbar-nav ms-auto mb-2 mb-lg-0 p-0 ">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="login.html">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Sign up</a>
+              </li>                       
+            </ul>
+           
+            <ul id="userInfo" class="navbar-nav ms-auto mb-2 mb-lg-0 p-0">
+              <li class="nav-item dropdown">
+                <button  class="nav-link position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-shopping-cart text-white fs-3"></i>
+                    <span id="badge" class="position-absolute translate-middle rounded-circle px-2 bg-white text-primary fw-semibold">
+                     
+                    </span>
+                </button>
+                <ul class="dropdown-menu bg-transparent border-0">
+                  <li id="shoppingCart" class=" shoppingCart card text-center w-100 h-100 bg-primary py-1 rounded-3 border-0">
+                    <div id="buyProduct" class="card-body px-4 overflow-auto ">
+                    </div>
+                    <div class="card-footer border-white">
+                      <div class="total d-flex justify-content-around mb-1 pt-2 mx-2">
+                        <h5 class="totalTitle me-3 text-white">Total</h5>
+                        <div id="totalPrice" class="me-2 text-primary bg-light px-3 h-25"></div>
+                      </div>
+                      <a class="ViewPro btn bg-light text-primary mb-1" href="cartProudcts.html">
+                        View all Proudcts
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a id="logOut" class="nav-link" href="index.html" onclick="logOut()"> Log Out</a>
+              </li>    
+            </ul>  
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar -->
+
+    <main>
+      <!-- search -->
+      <section class="searchSec bg-light p-4 ">
+        <div class="container d-flex">
+          <div id="btnSeach" class=" w-50 form-group pe-3">
+            <select class="form-select text-primary" id="searchOption">
+              <!-- <option value="">Search By</option> -->
+              <option value="searchTittle">Search By Title</option>
+              <option value="searchCategory">Search By Category</option>
+            </select>
+          </div>
+          <input
+            id="search"
+            type="text"
+            class="form-control w-50 ps-3"
+            placeholder="Search By Title"
+          />
+        </div>
+      </section>
+      <!-- search -->
+      <!-- Home -->
+      <section class="Home mt-4">
+        <div class="container">
+          <div id="products" class="products row">
+          </div>
+        </div>
+      </section>
+      <!-- Home -->
+    </main>
+    
+    <!-- pagination -->
+    <footer class="d-flex justify-content-center">
+      <ul class="pagination z-0">
+        <li class="page-item disabled">
+          <a class="page-link" href="javascript:void(0);">Previous</a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="javascript:void(0);">1</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:void(0);">2</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="javascript:void(0);">Next</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- pagination -->  
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script  src="js/script.js"></script>
+    <script src="js/user.js"></script>
+    
+  </body>
+</html>

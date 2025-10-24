@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UV-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+    />
+
+</head>
+
+<body>
+
+
+    <!-- navbar ------------------------------------------------------------------------------------------------ -->
+
+    <header class="bg-primary">
+        <nav class="navbar navbar-expand-lg p-0 m-0">
+            <div class="container">
+                <a class="navbar-brand p-0" href="index.html">
+                    <img src="images/14603825_5484736.jpg" alt="Logo" id="logo-image"  width="100px" height="70px">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="login.html">Sign In</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="register.html">Sign up</a>
+                        </li>                   
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- navbar ----------------------------------------------------------------------------------------------- -->
+
+    <main id="register" class=" d-flex justify-content-center align-items-center">
+        <section  id="registerform" class="section-form d-flex flex-column bg-primary mx-auto px-2 py-3">
+            <h2 class="text-white text-center display-4">Register User</h2>
+
+            <form class="d-flex flex-column px-4 mx-auto gap-2 w-100 text-dark fw-light">
+                <input type="text" class="ps-1 fw-medium fst-italic form-control rounded-0 " placeholder="Enter User Name" id="userName">
+                <input type="email" class="ps-1 fst-italic fw-medium form-control rounded-0" placeholder="Enter User Email" id="email">
+                <input type="password" class="ps-1 fst-italic fw-medium form-control rounded-0" placeholder="Enter User password" id="password">
+                <input type="submit" value="Sign up" class="fw-medium btn btn-light" id="signUP">
+                <p class="text-center"> Have Already Account? <a href="login.html"  class="text-light text-decoration-none ">Login</a></p>
+            </form>
+        </section>
+    </main>
+    
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>

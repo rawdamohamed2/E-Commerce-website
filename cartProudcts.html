@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UV-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>proudects Page</title>
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- navbar  -->
+    <header class="bg-primary z-3">
+      <nav class="navbar navbar-expand-lg bg-primary p-0 m-0">
+        <div class="container bg-primary h-75">
+          <a href="index.html" class="navbar-brand p-0" href="#">
+            <img
+              src="images/logo3.png"
+              alt="Logo"
+              id="logo-image"
+              width="80px"
+              height="70px"
+            />
+          </a>
+          <h3 id="user" class="text-white text-center position-absolute start-50 translate-middle-x text-capitalize ps-md-0 pt-md-0 pt-2 ps-3"></h3>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse pt-md-0 pt-3" id="navbarNav">
+            <ul id="links" class="navbar-nav mt-3 ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="login.html">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.html">Sign up</a>
+              </li>
+            </ul>
+            <ul
+              id="userInfo"
+              class="navbar-nav ms-auto"
+            >
+              <li class="nav-item dropdown">
+                <button  class="nav-link position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-shopping-cart text-white fs-3"></i>
+                    <span id="badge" class="position-absolute translate-middle rounded-circle px-2 bg-white text-primary fw-semibold">
+                     
+                    </span>
+                </button>
+                <ul class="dropdown-menu bg-transparent border-0 mt-md-0 mt-5">
+                  <li id="shoppingCart" class=" shoppingCart card text-center w-100 h-100 bg-primary py-1 rounded-3 border-0">
+                    <div id="buyProduct" class="card-body px-4 ">
+                    </div>
+                    <div class="card-footer border-white">
+                      <div class="total d-flex justify-content-around mb-1 pt-2 mx-2">
+                        <h5 class="totalTitle me-3 text-white">Total</h5>
+                        <div id="total" class="me-2 text-primary bg-light px-3 h-25"></div>
+                      </div>
+                      <a class="ViewPro btn bg-light text-primary mb-1" href="cartProudcts.html">
+                        View all Proudcts
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a id="logOut" class="nav-link" href="index.html" onclick="logOut()"> Log Out</a>
+              </li>
+            </ul> 
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- navbar  -->
+    
+    <main class="m-0">
+      <!-- productsInCart ----------------------------------------------------------------------------------------------- -->
+      <section class="productsInCart pt-4 pb-4 mb-4">
+        <div class="container mt-4 pt-4">
+          <div id="productsContainer" class=" row ">
+           
+          </div>
+        </div>
+        
+        <div
+          class="d-flex justify-content-center border-bottom mb-4 pt-2 pb-2"
+        >
+          <p class="totalTitle me-3 font-md text-primary">Total</p>
+          <div id="TotalPrice" class=" me-2 font-md "></div>
+        </div>
+
+      </section>
+
+      <!-- favorites ---------------------------------------------------------------------------------------------- -->
+
+      <section class="fav bg-primary py-5">
+        <div class="fav-Header mb-4">
+          <h2 class="fav-header-title text-center text-white">Your Favorites</h2>
+          <div class="line"></div>
+        </div>
+        <div class="container mt-4 pt-4">
+          <div id="favoritesCarousel" class="carousel slide overflow-hidden" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false">
+              
+
+          </div>
+        </div>
+      </section>
+    </main>
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/cartProudcts.js"></script>
+    <script src="js/user.js"></script>
+  </body>
+</html>
