@@ -1,7 +1,7 @@
 const userInfo = document.getElementById("userInfo");
 const user = document.getElementById("user");
 const links = document.getElementById("links");
-const getuserName = sessionStorage.getItem("userName");
+const getuserName = localStorage.getItem("userName");
 
 if (getuserName) {
     links.remove();
